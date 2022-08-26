@@ -1,7 +1,10 @@
-const inquire = ("inquirer");
-const manager = ("./manager.js");
-const intern = ("./intern.js");
-const fs = ("fs");
+const inquire = require("inquirer");
+const manager = require("./lib/manager");
+const intern = require("./lib/intern.js");
+const engineer = require("./lib/engineer")
+const fs = require("fs");
+const team = require("./src/team")
+// don not call require Employee and each class already calls it
 
 // Install dependencies
 // Create application to ask for Manager name, ID, Email, Office Number
