@@ -1,4 +1,4 @@
-const Employee = requirer("../lib/employee");
+const Employee = require("../lib/employee");
 const employee = new Employee("Levi", "1", "test@test.com");
 
 
@@ -20,4 +20,4 @@ describe("Employee", () => {
     it("Confirm role from getRole method", () => {
         expect(employee.getRole()).toBe("Employee");
     });
-})
+});
