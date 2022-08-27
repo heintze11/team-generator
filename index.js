@@ -4,7 +4,7 @@ const intern = require("./lib/intern.js");
 const engineer = require("./lib/engineer")
 const fs = require("fs");
 const team = require("./src/team")
-// don not call require Employee and each class already calls it
+// do not call require Employee and each class already calls it
 
 // Install dependencies
 // Create application to ask for Manager name, ID, Email, Office Number
