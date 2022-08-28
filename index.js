@@ -19,8 +19,7 @@ const Intern = require("./lib/intern")
     // Test each JS file - Employee, Manager, Engineer, Intern
 
 
-const members = [],
-    item_order = ["manager", "engineer", "intern"];
+const members = [];
 
 const startManager = () => {
     inquirer.prompt([
@@ -135,10 +134,7 @@ const menu = () => {
 };
 
 const generateTeam = () => {
-    //sort array so Interns are last - Not working
-    // members.sort((a, b) => item_order.indexOf(a.getRole) - item_order.indexOf(b.getRole));
-    // console.log(members);
-
+  
     fs.writeFile("./dist/index.html", team(members), (err) => 
     err ? console.log(err) : console.log ("success!"));
 };
