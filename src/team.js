@@ -4,24 +4,72 @@
 // put each piece of html into main html
 
 const createTeam = (team) => {
+    // empty array for html team members
     const html = [];
+    // create manager card
     const createManager = manager => {
-        let managerHtml = ``
+        let managerHtml = `
+        <div class="card">
+            <div class="card-header">
+                ${manager.name} <br/>
+                <!-- icon -->
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">ID: ${manager.id}</li>
+                    <li class="list-group-item">Email: <span id="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
+                    <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
+                </ul>
+            </div>
+        </div>`
+        html.push(managerHtml);
+    }
+    // create engineer card
+    const createEngineer = engineer => {
+        let engineerHtml = `
+        <div class="card">
+            <div class="card-header">
+                ${engineer.name} <br/>
+                <!-- icon -->
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">ID: ${engineer.id}</li>
+                    <li class="list-group-item">Email: <span id="email"><a href="mailto:${engineer.email}">${engineer.email}</a></span></li>
+                    <li class="list-group-item">Github Username: <a href="https://github.com/${engineer.github}">${engineer.github}</a></li>
+                </ul>
+            </div>
+        </div>`
+        html.push(engineerHtml);
+    }
+    // create intern cards
+    const createIntern = intern => {
+        let internHtml = `
+        <div class="card">
+            <div class="card-header">
+                ${intern.name} <br/>
+                <!-- icon -->
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">ID: ${intern.id}</li>
+                    <li class="list-group-item">Email: <span id="email"><a href="mailto:${intern.email}">${intern.email}</a></span></li>
+                    <li class="list-group-item">School: ${intern.school}</li>
+                </ul>
+            </div>
+        </div>`
+        html.push(internHtml);
+    }
+    // loop through all team members to create cards for each
+    for (let i = 0; i < team.length; i++) {
+        if (team[i].getRole() === "Manager"){
+            createManager(team[i]);
+        }
+        if (team[i].getRole() === "Engineer"){
+            createEngineer(team[i]);
+        }
+        if (team[i].getRole() === "Intern"){
+            createIntern(team[i]);
+        }
     }
 }
 
 
-for (let i = 0; i < team.length; i++) {
-    if (team[i].getRole() === "Manager"){
-        generateManager(team[i]);
-    }
-    if (team[i].getRole() === "Engineer"){
-        generateEngineer(team[i]);
-    }
-    if (team[i].getRole() === "Intern"){
-        generateIntern(team[i]);
-    }
-}
+
 
 
 
