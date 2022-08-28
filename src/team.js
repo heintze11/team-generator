@@ -1,8 +1,3 @@
-// Use to create HTML
-// create divs for each team member
-// for loop for each team member
-// put each piece of html into main html
-
 const createTeam = (team) => {
     // empty array for html team members
     const html = [];
@@ -10,7 +5,7 @@ const createTeam = (team) => {
     const createManager = manager => {
         let managerHtml = `
         <div class="card">
-            <div class="card-header">
+            <div class="card-header" style="width: 18rem;">
                 ${manager.name} <br/>
                 <!-- icon -->
                 <ul class="list-group list-group-flush">
@@ -26,7 +21,7 @@ const createTeam = (team) => {
     const createEngineer = engineer => {
         let engineerHtml = `
         <div class="card">
-            <div class="card-header">
+            <div class="card-header" style="width: 18rem;">
                 ${engineer.name} <br/>
                 <!-- icon -->
                 <ul class="list-group list-group-flush">
@@ -42,7 +37,7 @@ const createTeam = (team) => {
     const createIntern = intern => {
         let internHtml = `
         <div class="card">
-            <div class="card-header">
+            <div class="card-header" style="width: 18rem;">
                 ${intern.name} <br/>
                 <!-- icon -->
                 <ul class="list-group list-group-flush">
@@ -66,6 +61,8 @@ const createTeam = (team) => {
             createIntern(team[i]);
         }
     }
+    // join all html elements created
+    return html.join("");
 }
 
 

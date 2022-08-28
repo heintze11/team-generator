@@ -124,10 +124,10 @@ const menu = () => {
         }])
         .then((answer) => {
             switch(answer.select){
-            case "Engineer":
+            case "Add an Engineer":
                 startEngineer();
                 break;
-            case "Intern":
+            case "Add an Intern":
                 startIntern();
                 break;
             default:
