@@ -19,7 +19,8 @@ const Intern = require("./lib/intern")
     // Test each JS file - Employee, Manager, Engineer, Intern
 
 
-const members = [];
+const members = [],
+    item_order = ["manager", "engineer", "intern"];
 
 const startManager = () => {
     inquirer.prompt([
@@ -134,7 +135,7 @@ const menu = () => {
 };
 
 const generateTeam = () => {
-
+    
     fs.writeFile("./dist/index.html", team(members), (err) => 
     err ? console.log(err) : console.log ("success!"));
 };
