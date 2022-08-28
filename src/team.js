@@ -4,47 +4,48 @@ const createTeam = (team) => {
     // create manager card
     const createManager = manager => {
         let managerHtml = `
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">${manager.name}</h5>
+        <div class="card m-2 p-2 col-4" style="width: 18rem;">
+                <div class="card-header bg-danger">
+                    <h4 class="card-title text-decoration-underline">${manager.name}</h4>
+                    <h6>Manager</h6>
+                </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">ID #: ${manager.id}</li>
-                    <li class="list-group-item">Email: <span id="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
-                    <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
+                    <li class="list-group-item bg-info">ID #: ${manager.id}</li>
+                    <li class="list-group-item bg-info">Email: <span id="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
+                    <li class="list-group-item bg-info">Office Number: ${manager.officeNumber}</li>
                 </ul>
-            </div>
         </div>`
         html.push(managerHtml);
     }
     // create engineer card
     const createEngineer = engineer => {
         let engineerHtml = `
-        <div class="card" style="width: 18rem;">
-            <div class="card-header">
-                ${engineer.name} <br/>
-                <!-- icon -->
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">ID #: ${engineer.id}</li>
-                    <li class="list-group-item">Email: <span id="email"><a href="mailto:${engineer.email}">${engineer.email}</a></span></li>
-                    <li class="list-group-item">Github Username: <a href="https://github.com/${engineer.github}">${engineer.github}</a></li>
-                </ul>
+        <div class="card m-2 p-2 col-4" style="width: 18rem;">
+            <div class="card-header bg-success">
+                <h4 class="card-title text-decoration-underline">${engineer.name}</h4>
+                <h6>Engineer</h6>
             </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-info">ID #: ${engineer.id}</li>
+                    <li class="list-group-item bg-info">Email: <span id="email"><a href="mailto:${engineer.email}">${engineer.email}</a></span></li>
+                    <li class="list-group-item bg-info">Github Username: <a href="https://github.com/${engineer.github}">${engineer.github}</a></li>
+                </ul>
         </div>`
         html.push(engineerHtml);
     }
     // create intern cards
     const createIntern = intern => {
         let internHtml = `
-        <div class="card" style="width: 18rem;">
-            <div class="card-header">
-                ${intern.name} <br/>
-                <!-- icon -->
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">ID #: ${intern.id}</li>
-                    <li class="list-group-item">Email: <span id="email"><a href="mailto:${intern.email}">${intern.email}</a></span></li>
-                    <li class="list-group-item">School: ${intern.school}</li>
-                </ul>
+        <div class="card m-2 p-2 col-4" style="width: 18rem;">
+            <div class="card-header bg-secondary">
+                <h4 class="card-title text-decoration-underline">${intern.name}</h4>
+                <h6>Intern</h6>
             </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-info">ID #: ${intern.id}</li>
+                    <li class="list-group-item bg-info">Email: <span id="email"><a href="mailto:${intern.email}">${intern.email}</a></span></li>
+                    <li class="list-group-item bg-info">School: ${intern.school}</li>
+                </ul>
         </div>`
         html.push(internHtml);
     }
@@ -82,9 +83,9 @@ module.exports = team => {
     </head>
     <body>
         <header>
-            <h1 class="text-center m-2 p-2 bg-success">Software Team</h1>
+            <h1 class="text-center m-2 p-2 header">Software Team</h1>
         </header>
-        <main>
+        <main class="row justify-content-center">
             ${createTeam(team)}
         </main>
     </body>

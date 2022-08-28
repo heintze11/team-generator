@@ -45,7 +45,6 @@ const startManager = () => {
         },
     ])
     .then((answers) => {
-        console.log(answers);
         const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
         members.push(manager);
         menu();
@@ -76,7 +75,6 @@ const startEngineer = () => {
         },
     ])
     .then((answers) => {
-        console.log(answers);
         const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
         members.push(engineer);
         menu();
@@ -107,7 +105,6 @@ const startIntern = () => {
         },
     ])
     .then((answers) => {
-        console.log(answers);
         const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
         members.push(intern);
         menu();
@@ -137,7 +134,6 @@ const menu = () => {
 };
 
 const generateTeam = () => {
-    console.log(members);
 
     fs.writeFile("./dist/index.html", team(members), (err) => 
     err ? console.log(err) : console.log ("success!"));
