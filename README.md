@@ -15,7 +15,7 @@ Unit test have been built to test each Class type. Tests can be run using "npm t
 ## Links
 -[Github](https://github.com/heintze11/team-generator)
 
--[Example Video](https://watch.screencastify.com)
+-[Example Video](https://watch.screencastify.com/v/LzEtvOONO8olLMZ2dopr)
 
 ## Screenshot
-![final-screenshot](Assets/images/final-screenshot.PNG)
+![final-screenshot](Assets/final-screenshot.PNG)
