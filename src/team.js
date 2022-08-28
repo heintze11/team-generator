@@ -65,11 +65,7 @@ const createTeam = (team) => {
     return html.join("");
 }
 
-
-
-
-
-
+//output final html
 module.exports = team => {
     return `<!DOCTYPE html>
     <html lang="en">
